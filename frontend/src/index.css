@@ -1,0 +1,267 @@
+@font-face {
+    font-family: "Digital Dismay";
+    src: url("./digital-dismay.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Press Start";
+    src: url("./prstart.ttf");
+}
+
+@font-face {
+    font-family: "MS Sans Serif";
+    src: url("./micross.ttf");
+}
+
+* {
+    -o-user-select: none;
+    user-select: none;
+}
+
+body {
+    background-color: #0D8584;
+}
+
+#board {
+    background-color: lightgray;
+}
+
+button {
+    font-family: 'MS Sans Serif';
+    text-align: left;
+    font-size: 14px;
+    height: 30px;
+    /* width: 100px; */
+    background-color: #BFBFBF;
+    color: black;
+    border-bottom: 2px solid #7B7B7B;
+    border-left: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #7B7B7B;
+}
+
+button:hover {
+    background-color: lightgray;
+    color: slategray;
+    cursor: pointer;
+}
+
+#clock {
+    font-family: 'MS Sans Serif';
+    font-size: 14px;
+    display: inline;
+    float: right;
+    border-top: 1.5px solid #808080;
+    border-left: 1.5px solid #808080;
+    border-right: 1.5px solid #FAFAFA;
+    border-bottom: 1.5px solid #FAFAFA;
+    /* height: 28px; */
+    width: 200px;
+    height: 22px;
+    margin: 2px;
+    padding: 5px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    margin: 80px 10px;
+}
+
+#folder1 {
+    display: inline;
+    padding-right: 10px;
+}
+
+#folder2 {
+    display: inline;
+    padding-right: 10px;
+}
+
+#folder-bar {
+    background-color: #D3CEC4;
+    border: none;
+    text-align: left;
+    padding: 2px 8px;
+}
+
+#footer {
+    text-align: center;
+    position: fixed;
+    height: 36px;
+    background-color: #BFBFBF;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+.menu a {
+    font-family: 'MS Sans Serif';
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+#reset {
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #7B7B7B;
+    border-bottom: 2px solid #7B7B7B;
+    border-left: 2px solid #ffffff;
+}
+
+.revealed {
+     background-color: #C0C0C0;
+    border: none;
+    font-family: "Press Start";
+    font-size: 12px;
+}
+
+#reset:hover {
+    text-align: center;
+    cursor: pointer;
+}
+
+.sidebar {
+    vertical-align: top;
+    max-width: 300px;
+    margin: 0 30px;
+}
+
+#size-btns {
+    float: left;
+    display: inline;
+    margin: 2px;
+}
+
+#start {
+    float: left;
+}
+
+#status-bar  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2px;
+    margin: 6px;
+    border-top: 2px solid #7B7B7B;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-left: 2px solid #7B7B7B;
+}
+
+td {
+    height: 20px;
+    width: 20px;
+    background-color: #C0C0C0;
+    border: 1.5px solid;
+    border-top-color: #ffffff;
+    border-right-color: #7B7B7B;
+    border-bottom-color: #7B7B7B;
+    border-left-color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#timer, #bomb-counter {
+    font-family: 'Digital Dismay';
+    font-size: 35px;
+    letter-spacing: 1px;
+    color: red;
+    background-color: black;
+    text-align: center;
+    padding: 4px 4px 0 7px;
+    line-height: 1em;
+}
+
+#window-controls {
+    float: right;
+    cursor: pointer;
+}
+
+#window-title {
+    font-family: 'MS Sans Serif';
+    letter-spacing: .5px;
+    float: left;
+    color: #D5DEF3;
+    font-size: 16px;
+}
+
+#window-title-bar {
+    background: -moz-linear-gradient(left, rgba(33,41,89,1) 0%, rgba(33,41,89,1) 11%, rgba(80,114,161,1) 56%, rgba(117,172,219,0.7) 92%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(33,41,89,1) 0%,rgba(33,41,89,1) 11%,rgba(80,114,161,1) 56%,rgba(117,172,219,0.7) 92%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(33,41,89,1) 0%,rgba(33,41,89,1) 11%,rgba(80,114,161,1) 56%,rgba(117,172,219,0.7) 92%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212959', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+}
+.win98-btn {
+  font-family: "MS Sans Serif";
+  font-size: 14px;
+  padding: 6px 14px;
+  background: #BFBFBF;
+  color: black;
+  border: 2px solid;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #7B7B7B;
+  border-bottom-color: #7B7B7B;
+  box-shadow: inset -1px -1px 0 #ffffff, inset 1px 1px 0 #7B7B7B;
+  cursor: pointer;
+}
+
+.win98-btn:active {
+  border-top-color: #7B7B7B;
+  border-left-color: #7B7B7B;
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
+  background: #C0C0C0;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #7B7B7B;
+}
+
+.win98-btn:hover {
+  background-color: #D9D9D9;
+}
+
+.wallet-panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  margin-top: 12px;
+}
+
+.win98-progress-wrapper {
+  width: 200px;
+  height: 16px;
+  background: #c0c0c0;
+  border: 2px solid #fff;
+  outline: 2px solid #000;
+  padding: 1px;
+  margin: 8px auto;
+  box-shadow: inset -1px -1px 0 #808080, inset 1px 1px 0 #dfdfdf;
+}
+
+.win98-progress-bar {
+  height: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    #000080,
+    #000080 6px,
+    #1e90ff 6px,
+    #1e90ff 12px
+  );
+  animation: win98-progress-stripe 450ms linear infinite;
+}
+
+@keyframes win98-progress-stripe {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 24px 0;
+  }
+}
